@@ -1,6 +1,6 @@
 # Line configuration project
 
-Simple overview of use/purpose.
+Creation of the config_nvdsanalytics.txt file for the line creation in the Deepstream SDK
 
 ## Description
 
@@ -11,52 +11,35 @@ This python scripts provide the oportunity to save a camera frame, draw the requ
 ### Dependencies
 
 * Prior to running the main.py script it is recommended to create a virtual environment based on the requirements.txt file added in the project.
-* 
+ ```
+$ sudo apt-get install python3-pip
+$ python -m pip install virtualenvwrapper
+```
+* Create a virtual environment using the requirements.txt file added in this repository
+```
+$ virtualenv -r /path/to/repository/folder/requirements.txt name_of_venv
+```
 
 ### Installing
+```
+git clone https://www.github.com/josedev9/Line-configuration.git
+```
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
 
 ### Executing program
 
 * How to run the program
-* Step-by-step bullets
+* Capture a frame with the camera
 ```
-code blocks for commands
+$ python3 .\main.py -s name_of_frame_to_save
 ```
+* Select the 2 direction points of the line and the 2 required points for the line definition, once the GUI has been opened.
+* Click to select each of the points, a circle and then a line will apear on the screen, to restart press the r key.
+* Once done press q to exit the app and to save the coordinates in the appropriate file.
 
 ## Help
 
 Any advise for common problems or issues.
 ```
-command to run if program contains helper info
+$ python3 .\main.py --help
 ```
-
-## Authors
-
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
