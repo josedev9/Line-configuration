@@ -17,7 +17,7 @@ def click_function(event, x, y, flags, param):
             
 
 def create_window(file):
-    global points_line_1,frame
+    global points_line_1,frame,count
     frame=cv2.imread(file)
     print("====================================================================================")
     if frame.size==0:
@@ -40,3 +40,4 @@ def create_window(file):
                 elif key==ord('r'):
                     frame=initial_frame.copy()
                     points_line_1.clear()
+                    count=0
