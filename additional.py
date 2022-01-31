@@ -1,10 +1,10 @@
-import numpy,cv2,imutils,os
+import numpy,cv2,imutils,os,sys
 discard=15
 flag0="line-crossing-Exit="
 flag1="line-crossing-Entry="
 def capture_frame(name):
     global discard
-    cap=cv2.VideoCapture(0,cv2.CAP_DSHOW)
+    cap=cv2.VideoCapture("/dev/video0",cv2.CAP_DSHOW)
     if not cap.isOpened():
         print("Couldn't initiate a videocapture object from the camera.\nExiting current app...")
     else:
@@ -15,7 +15,7 @@ def capture_frame(name):
         success,frame=cap.read()
         if not success:
             print("Couldn't open the selected camera.\nExiting current app...")
-            break
+            sys.exit()
         else:
             discard-=1
     frame=cv2.resize(frame,(640,480),interpolation=cv2.INTER_CUBIC)

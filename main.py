@@ -27,7 +27,7 @@ file=[i for i in os.listdir('.') if i.endswith(".png")]
 if len(file)>1: print("Error multiple .png files detected, delete the older ones...\nExiting")
 elif file: 
     points1,points2=create_window(f"{os.path.join(os.getcwd(),''.join(file))}")
-    change_content(path="C:\\Users\\%USERNAME%\Downloads\\config_nvdsanalytics.txt",p1=points1,p2=points2)
+    change_content(path="/home/tkeic/Documents/deepstream/counter/config_nvdsanalytics.txt",p1=points1,p2=points2)
 else: raise(FileNotFoundError("Couldn't file the .png file captured from the camera so the GUI can't be initiated, stopping execution..."))
 
 
