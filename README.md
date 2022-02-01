@@ -17,7 +17,7 @@ $ python -m pip install virtualenvwrapper
 ```
 * Create a virtual environment using the requirements.txt file added in this repository
 ```
-$ virtualenv -r /path/to/repository/folder/requirements.txt name_of_venv
+$ mkvirtualenv -r /path/to/repository/folder/requirements.txt name_of_venv
 ```
 
 ### Installing
